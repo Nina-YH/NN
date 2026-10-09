@@ -1,5 +1,5 @@
 /* 霓虹自律 · Service Worker（离线缓存） */
-const CACHE = 'neon-self-discipline-v1';
+const CACHE = 'neon-self-discipline-v2';
 const ASSETS = [
   './',
   './index.html',
