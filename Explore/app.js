@@ -101,6 +101,7 @@ function periodKey(hour) {
 }
 
 const PERIOD_LABEL = { morning: '清 晨', day: '白 天', dusk: '傍 晚', night: '夜 晚' };
+const PERIOD_THEME = { morning: '#2b1a4e', day: '#4b2d72', dusk: '#241033', night: '#1b0b32' };
 
 let currentPeriod = null;
 
@@ -110,6 +111,9 @@ function applyPeriod() {
   currentPeriod = key;
   document.body.classList.remove('period-morning', 'period-day', 'period-dusk', 'period-night');
   document.body.classList.add('period-' + key);
+  // 让刘海/状态栏颜色与背景顶部融合，避免出现黑色
+  const themeEl = document.querySelector('meta[name="theme-color"]');
+  if (themeEl) themeEl.setAttribute('content', PERIOD_THEME[key]);
 }
 
 function initParticles() {
