@@ -44,7 +44,7 @@ body {
 }
 
 /* ===== 背景层 ===== */
-.bg { position: fixed; top: 0; left: 0; right: 0; height: 100vh; height: 100dvh; z-index: 0; overflow: hidden; background: var(--bg-gradient); transition: background 1.2s ease; }
+.bg { position: fixed; inset: 0; z-index: 0; overflow: hidden; background: var(--bg-gradient); transition: background 1.2s ease; }
 
 .bg__grid {
   position: absolute; inset: 0;
@@ -235,6 +235,13 @@ body.period-dusk {
   border-top: 1px solid var(--border);
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
+}
+.tabbar::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 100%;
+  height: 60px;
+  background: #0d0618;
 }
 
 .tab {
