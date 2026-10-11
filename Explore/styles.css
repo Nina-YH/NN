@@ -39,7 +39,7 @@ body {
 }
 
 /* ===== 背景层 ===== */
-.bg { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; overflow: hidden; background: var(--bg-gradient); transition: background 1.2s ease; }
+.bg { position: fixed; top: 0; left: 0; right: 0; bottom: -96px; z-index: 0; overflow: hidden; background: var(--bg-gradient); transition: background 1.2s ease; }
 
 .bg__grid {
   position: absolute; inset: 0;
@@ -222,7 +222,7 @@ body.period-dusk {
 
 /* ===== 底部导航 ===== */
 .tabbar {
-  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+  position: fixed; left: 0; right: 0; bottom: -96px; z-index: 10;
   display: flex; justify-content: space-around;
   max-width: 480px; margin: 0 auto;
   padding: 10px 8px calc(env(safe-area-inset-bottom, 0px) + 8px);
@@ -505,27 +505,3 @@ body.period-dusk {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); white-space: nowrap;
 }
 .toast.is-show { opacity: 1; transform: translateX(-50%) translateY(0); }
-/* ===== 终极强制覆盖 ===== */
-/* 1. 彻底干掉那个多出来的 60px 色块！ */
-.tabbar::after {
-  display: none !important;
-  height: 0 !important;
-  content: none !important;
-}
-
-/* 2. 让背景图从灵动岛一直铺到最底部的边缘！ */
-.bg {
-  bottom: 0 !important;
-  top: 0 !important;
-}
-
-/* 3. 把导航栏死死地钉在屏幕最下面，只留系统安全区！ */
-.tabbar {
-  bottom: 0 !important;
-  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 8px) !important;
-}
-
-/* 4. 让内容和滚动区域自适应 */
-.app {
-  padding-bottom: 100px !important; /* 保证内容不被导航栏遮挡 */
-}
