@@ -39,7 +39,7 @@ body {
 }
 
 /* ===== 背景层 ===== */
-.bg { position: fixed; top: 0; left: 0; right: 0; bottom: -32px; z-index: 0; overflow: hidden; background: var(--bg-gradient); transition: background 1.2s ease; }
+.bg { position: fixed; top: 0; left: 0; right: 0; bottom: -96px; z-index: 0; overflow: hidden; background: var(--bg-gradient); transition: background 1.2s ease; }
 
 .bg__grid {
   position: absolute; inset: 0;
