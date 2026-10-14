@@ -39,7 +39,7 @@ body {
 }
 
 /* ===== 背景层 ===== */
-.bg { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; overflow: hidden; background: var(--bg-gradient); transition: background 1.2s ease; }
+.bg { position: fixed; top: 0; left: 0; right: 0; bottom: -32px; z-index: 0; overflow: hidden; background: var(--bg-gradient); transition: background 1.2s ease; }
 
 .bg__grid {
   position: absolute; inset: 0;
@@ -222,7 +222,7 @@ body.period-dusk {
 
 /* ===== 底部导航 ===== */
 .tabbar {
-  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+  position: fixed; left: 0; right: 0; bottom: -32px; z-index: 10;
   display: flex; justify-content: space-around;
   max-width: 480px; margin: 0 auto;
   padding: 10px 8px calc(env(safe-area-inset-bottom, 0px) + 8px);
