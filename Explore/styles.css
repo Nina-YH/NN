@@ -235,7 +235,7 @@ body.period-dusk {
   width: 100%;
   max-width: 480px; margin: 0 auto;
   display: flex; justify-content: space-around;
-  padding: 10px 8px calc(env(safe-area-inset-bottom, 0px) + 8px);
+  padding: 10px 8px 8px;
   background: rgba(13, 6, 24, 0.78);
   border-top: 1px solid var(--border);
   backdrop-filter: blur(22px);
