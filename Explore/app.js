@@ -1,4 +1,4 @@
-/* ===== 霓虹自律 · 应用逻辑 ===== */
+/* ===== Antheris Diary · 应用逻辑 ===== */
 
 // ---------- 数据层（localStorage） ----------
 const DB_KEY = 'neon_self_discipline_v1';
@@ -729,10 +729,10 @@ function showToast(msg) {
 async function exportData() {
   try {
     const json = JSON.stringify(DB.data, null, 2);
-    const file = new File([json], `霓虹自律备份_${todayStr()}.json`, { type: 'application/json' });
+    const file = new File([json], `Antheris-Diary备份_${todayStr()}.json`, { type: 'application/json' });
     // 优先用系统分享（iPhone 可「存储到文件」），否则回退为下载
     if (navigator.canShare && navigator.canShare({ files: [file] })) {
-      await navigator.share({ files: [file], title: '霓虹自律备份' });
+      await navigator.share({ files: [file], title: 'Antheris Diary 备份' });
       return;
     }
     const blob = new Blob([json], { type: 'application/json' });
